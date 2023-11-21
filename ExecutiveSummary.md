@@ -5,7 +5,7 @@
 #### The assignment overview shows how well you understand the assignment
 
 This assignment delved into the intricacies of the Two-Phase Commit protocol, exploring how clients coordinate operations with participants (servers in our case), leading to a transaction prepared by a coordinator. The subsequent commit phase relies on unanimous participant votes, ensuring the transaction's adherence to the ACID properties in a distributed environment. The assignment's primary goal was to implement and understand the mechanics of distributed transactions, emphasizing the importance of coordination and consensus for consistency.
-
+Future extension of the project can include implementing the optional rollback.
 
 ## Technical Impression
 
