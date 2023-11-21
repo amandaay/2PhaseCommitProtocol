@@ -1,6 +1,9 @@
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 
+/**
+ * Key Value Store Client
+ */
 public class KeyValueStoreClient {
 
     private KeyValueStoreClient() {}

@@ -1,8 +1,12 @@
+/*Amanda Au-Yeung*/
 import java.rmi.server.UnicastRemoteObject;
 import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Coordinator implementation
+ */
 public class CoordinatorImpl extends UnicastRemoteObject implements Coordinator {
 
     private List<KeyValueStore> participants;

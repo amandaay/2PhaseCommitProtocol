@@ -2,8 +2,11 @@ import java.rmi.server.UnicastRemoteObject;
 import java.rmi.RemoteException;
 import java.util.concurrent.ConcurrentHashMap;
 
+/**
+ * My Participant Implementation
+ */
 public class KeyValueStoreImpl extends UnicastRemoteObject implements KeyValueStore {
-private ConcurrentHashMap<String, String> operation = new ConcurrentHashMap<>();
+    private ConcurrentHashMap<String, String> operation = new ConcurrentHashMap<>();
     private String transaction;
     private Coordinator coordinator;
     private String response;
@@ -15,6 +18,7 @@ private ConcurrentHashMap<String, String> operation = new ConcurrentHashMap<>();
     @Override
     public boolean prepare(String transaction) throws RemoteException {
         this.transaction = transaction;
+        // condition to abort if deleting something that doesn't exist
         if (this.transaction.split(" ")[0].equalsIgnoreCase("DELETE")) {
             if (!operation.containsKey(this.transaction.split(" ")[1])){
                 return false;

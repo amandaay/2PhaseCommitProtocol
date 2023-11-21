@@ -1,8 +1,16 @@
+/*Amanda*/
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Server to run:
+ * initialize 5 instance of the participants and bind them to RMI registry
+ * initialize 1 instance of the coordinator and bind it to the RMI registry.
+ * First create 5 instance of the participants. Then create the instance of coordinator.
+ * Update each instance of the participants with the instance of the coordinator only after you have created the coordinator.
+ */
 public class Server {
 
     public static void main(String[] args) {
